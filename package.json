@@ -4,11 +4,14 @@
   "description": "Notes App",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon backend/index.js"
+    "start": "nodemon backend/index.js",
+    "client":"npm start --prefix frontend",
+    "dev":"concurrently \"npm start\" \"npm run client\" "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^9.2.1",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
